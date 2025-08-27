@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui
+  name: guestbook-ui-preprod
 spec:
   replicas: 1
   revisionHistoryLimit: 3
@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: guestbook-ui-preprod
     spec:
       containers:
       - image: quay.io/argoprojlabs/argocd-e2e-container:0.2
